@@ -1,457 +1,1455 @@
-<!DOCTYPE HTML>
-<!--
-	Massively by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<!DOCTYPE HTML>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Tlotso T Pheto | Impact-Driven Data Analytics</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-    <link rel="stylesheet" href="assets/css/main.css" />
-    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Tlotso T Pheto | Data Analytics Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css"/>
+<style>
+/* ─────────────────────────────────────────────────
+   DEEP NAVY & AMBER — Self-Contained Portfolio
+───────────────────────────────────────────────── */
+:root {
+  --accent:      #c1121f;
+  --accent-dim:  rgba(193,18,31,0.08);
+  --accent-glow: rgba(193,18,31,0.15);
+  --bg:          #ffffff;
+  --bg-2:        #f8f8f6;
+  --bg-3:        #ffffff;
+  --bg-4:        #f2f2f0;
+  --border:      #e8e4dc;
+  --text:        #1a1a1a;
+  --muted:       #555555;
+  --dim:         #999999;
+  --font-head:   'Source Serif 4', Georgia, serif;
+  --font-body:   'Inter', sans-serif;
+}
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-   
-    <style>
-        /* Modern Executive Styling */
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  font-size:16px;
+  line-height:1.7;
+  overflow-x:hidden;
+}
+a{color:var(--accent);text-decoration:none;transition:opacity .2s}
+a:hover{opacity:.8}
+h1,h2,h3{font-family:var(--font-head);line-height:1.15}
+img{max-width:100%}
 
-        :root {
-            --primary-red: #c1121f;
-            --dark-bg: #1d1f21;
-            --glass-white: rgba(255, 255, 255, 0.05);
-            --text-muted: #a0a0a0;
-        }
+/* ── STICKY NAV ── */
+nav#topnav{
+  position:sticky;
+  top:0;
+  z-index:100;
+  background:rgba(255,255,255,0.96);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+  box-shadow:0 1px 0 rgba(0,0,0,0.06);
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:.9rem 2.5rem;
+}
+.nav-logo{
+  font-family:var(--font-head);
+  font-size:1rem;
+  font-weight:800;
+  color:var(--accent);
+  letter-spacing:2px;
+}
+.nav-links{display:flex;gap:1.8rem;list-style:none;align-items:center}
+.nav-links a{
+  font-size:.82rem;
+  letter-spacing:1.5px;
+  text-transform:uppercase;
+  color:var(--muted);
+  transition:color .2s;
+}
+.nav-links a:hover,.nav-links a.active{color:var(--accent)}
+.nav-links .icon-link{font-size:1.1rem;color:var(--dim)}
+.nav-links .icon-link:hover{color:var(--accent)}
+#bio-trigger{cursor:pointer}
 
-        #intro {
-            padding: 8rem 2rem;
-            background-attachment: fixed;
-            background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('images/overlay.png');
-        }
+/* ── HERO ── */
+#hero{
+  min-height:92vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:6rem 2rem 4rem;
+  background:
+    radial-gradient(ellipse 80% 50% at 50% -5%, rgba(193,18,31,.05) 0%, transparent 60%),
+    linear-gradient(180deg, #ffffff 0%, #f8f8f6 100%);
+  position:relative;
+  overflow:hidden;
+}
+#hero::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:
+    radial-gradient(circle at 15% 85%, rgba(193,18,31,.03) 0%, transparent 50%),
+    radial-gradient(circle at 85% 15%, rgba(193,18,31,.03) 0%, transparent 50%);
+  pointer-events:none;
+}
+.hero-overline{
+  font-size:.65rem;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:1.5rem;
+  opacity:1;
+}
+#hero h1{
+  font-size:clamp(2.4rem,6vw,4.5rem);
+  font-weight:800;
+  letter-spacing:4px;
+  color:var(--text);
+  margin-bottom:1.5rem;
+  text-transform:uppercase;
+}
+#hero h1 span{color:var(--accent)}
+.hero-desc{
+  max-width:680px;
+  margin:0 auto 1.2rem;
+  color:var(--muted);
+  font-size:1.05rem;
+  line-height:1.8;
+}
+.hero-desc strong{color:var(--accent)}
+.hero-sub{
+  max-width:560px;
+  margin:0 auto 3rem;
+  color:var(--dim);
+  font-size:.9rem;
+}
+.hero-sub strong{color:var(--muted)}
+.hero-cta{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  padding:.7rem 1.8rem;
+  border-radius:6px;
+  font-size:.82rem;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all .25s;
+  border:none;
+}
+.btn-gold{
+  background:var(--accent);
+  color:#ffffff;
+}
+.btn-gold:hover{background:#a50e18;opacity:1}
+.btn-outline{
+  background:transparent;
+  border:1.5px solid #cccccc;
+  color:var(--muted);
+}
+.btn-outline:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim);opacity:1}
+.scroll-hint{
+  position:absolute;
+  bottom:2rem;
+  left:50%;
+  transform:translateX(-50%);
+  color:var(--accent);
+  font-size:.75rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  animation:bounce 2s infinite;
+}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(-6px)}}
 
-        /* KPI Section Refinement */
-        .kpi-section {
-            background: #111111;
-            padding: 5rem 0;
-            border-bottom: 1px solid #333;
-        }
+/* ── KPI STRIP ── */
+#kpis{
+  background:var(--bg-2);
+  border-top:1px solid var(--border);
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  padding:4rem 2rem;
+}
+.kpi-label{
+  text-align:center;
+  font-size:.62rem;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--dim);
+  margin-bottom:2.5rem;
+}
+.kpi-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:1.2rem;
+  max-width:1100px;
+  margin:0 auto;
+}
+.kpi-card{
+  background:#ffffff;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:2rem 1.5rem;
+  text-align:center;
+  position:relative;
+  overflow:hidden;
+  transition:all .3s;
+  box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+.kpi-card::after{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:2px;
+  background:var(--accent);
+  transform:scaleX(0);
+  transition:transform .3s;
+}
+.kpi-card:hover::after{transform:scaleX(1)}
+.kpi-card:hover{transform:translateY(-6px);border-color:var(--accent);box-shadow:0 16px 40px rgba(0,0,0,.1),0 0 20px var(--accent-glow)}
+.kpi-card i{font-size:1.5rem;color:var(--accent);margin-bottom:.8rem;display:block}
+.kpi-num{font-family:var(--font-head);font-size:2.2rem;font-weight:800;color:var(--text);letter-spacing:-1px;margin-bottom:.3rem}
+.kpi-desc{font-size:.72rem;letter-spacing:2px;text-transform:uppercase;color:var(--muted)}
 
-        .kpi-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 1.5rem;
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 2rem;
-        }
+/* ── SECTION LAYOUT ── */
+section.content-section{
+  max-width:1100px;
+  margin:0 auto;
+  padding:5rem 2rem;
+}
+.section-label{
+  font-size:.62rem;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--accent);
+  margin-bottom:.8rem;
+}
+.section-title{
+  font-size:clamp(1.6rem,3vw,2.4rem);
+  font-weight:800;
+  color:var(--text);
+  margin-bottom:3rem;
+}
 
-        .kpi-card {
-            background: var(--glass-white);
-            border: 1px solid #333;
-            padding: 2.5rem 1.5rem;
-            text-align: center;
-            border-radius: 12px;
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
+/* ── FEATURED PROJECT ── */
+.featured-card{
+  background:var(--bg-3);
+  border:1px solid var(--border);
+  border-radius:16px;
+  overflow:hidden;
+  margin-bottom:3rem;
+  transition:all .3s;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);
+}
+.featured-card:hover{border-color:var(--accent);box-shadow:0 20px 50px rgba(0,0,0,.12),0 0 30px var(--accent-glow)}
+.featured-icon-bar{
+  height:140px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f8f2f3;
+  font-size:3.5rem;
+  color:var(--accent);
+  border-bottom:1px solid var(--border);
+}
+.featured-body{padding:2.5rem}
+.proj-badge{
+  display:inline-block;
+  background:var(--accent-dim);
+  color:var(--accent);
+  border:1px solid rgba(193,18,31,.2);
+  padding:.3rem .9rem;
+  border-radius:50px;
+  font-size:.68rem;
+  font-weight:700;
+  letter-spacing:.8px;
+  margin-bottom:1rem;
+}
+.featured-body h2{
+  font-size:clamp(1.4rem,3vw,2rem);
+  font-weight:800;
+  color:var(--text);
+  margin-bottom:.8rem;
+  line-height:1.3;
+}
+.featured-body h2 a{color:inherit}
+.featured-body h2 a:hover{color:var(--accent);opacity:1}
+.featured-body p{color:var(--muted);margin-bottom:1.2rem}
+.engine-box{
+  background:#faf8f5;
+  border:1px solid var(--border);
+  border-left:3px solid var(--accent);
+  border-radius:10px;
+  padding:1.4rem 1.6rem;
+  margin:1.5rem 0;
+}
+.engine-label{
+  font-size:.62rem;
+  letter-spacing:3px;
+  text-transform:uppercase;
+  color:var(--dim);
+  margin-bottom:1rem;
+}
+.engine-list{list-style:none;font-size:.88rem;line-height:1.9}
+.engine-list li{display:flex;gap:.8rem;align-items:flex-start;margin-bottom:.5rem}
+.engine-list i{margin-top:3px;flex-shrink:0}
+.stack-line{font-size:.78rem;color:var(--dim);margin-bottom:1.5rem}
+.stack-line strong{color:var(--muted)}
+.btn-row{display:flex;gap:.8rem;flex-wrap:wrap}
 
-        .kpi-card:hover {
-            transform: translateY(-10px);
-            border-color: var(--primary-red);
-            background: rgba(193, 18, 31, 0.05);
-        }
+/* ── PROJECT GRID ── */
+.proj-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:1.5rem;
+}
+.proj-card{
+  background:var(--bg-3);
+  border:1px solid var(--border);
+  border-radius:14px;
+  overflow:hidden;
+  transition:all .3s;
+  display:flex;
+  flex-direction:column;
+  box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+.proj-card:hover{border-color:var(--accent);transform:translateY(-5px);box-shadow:0 16px 40px rgba(0,0,0,.1),0 0 16px var(--accent-glow)}
+.proj-icon-bar{
+  height:110px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#f5f5f3;
+  font-size:2.8rem;
+  color:var(--muted);
+  border-bottom:1px solid var(--border);
+}
+.proj-body{padding:1.6rem;flex:1;display:flex;flex-direction:column}
+.proj-body h3{font-size:1.05rem;font-weight:700;color:var(--text);margin:.6rem 0 .6rem;line-height:1.3}
+.proj-body h3 a{color:inherit}
+.proj-body h3 a:hover{color:var(--accent);opacity:1}
+.proj-body p{color:var(--muted);font-size:.88rem;flex:1;margin-bottom:1rem}
+.proj-stack{font-size:.73rem;color:var(--dim);margin-bottom:1.2rem}
+.proj-stack strong{color:var(--dim)}
 
-        .kpi-card i {
-            font-size: 2rem;
-            color: var(--primary-red);
-            margin-bottom: 1rem;
-            display: block;
-        }
+/* ── TECH STACK — PyCharm-style dark card grid ── */
+#techstack{
+  background:#f8f8f6;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  padding:5rem 2rem;
+  position:relative;
+  overflow:hidden;
+}
+#techstack::before{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(193,18,31,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(193,18,31,.04) 1px, transparent 1px);
+  background-size:40px 40px;
+  pointer-events:none;
+}
+.tech-section-head{
+  text-align:center;
+  max-width:700px;
+  margin:0 auto 3rem;
+  position:relative;z-index:1;
+}
+.tech-section-head h2{
+  font-family:'Source Serif 4',Georgia,serif;
+  font-size:clamp(1.8rem,3vw,2.4rem);
+  font-weight:800;
+  color:var(--text);
+  margin-bottom:.6rem;
+}
+.tech-section-head p{
+  font-size:.95rem;
+  color:var(--muted);
+  line-height:1.7;
+}
+/* Filter tabs */
+.tech-filters{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:.5rem;
+  margin-bottom:2.5rem;
+  position:relative;z-index:1;
+}
+.tech-filter-btn{
+  background:#ffffff;
+  border:1px solid var(--border);
+  color:var(--muted);
+  box-shadow:0 1px 3px rgba(0,0,0,.06);
+  padding:.4rem 1.1rem;
+  border-radius:50px;
+  font-size:.75rem;
+  font-weight:600;
+  letter-spacing:1px;
+  text-transform:uppercase;
+  cursor:pointer;
+  font-family:'Inter',sans-serif;
+  transition:all .2s;
+}
+.tech-filter-btn:hover,
+.tech-filter-btn.active{
+  background:var(--accent);
+  border-color:var(--accent);
+  color:#fff;
+}
+/* Card grid */
+.tech-card-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(140px,1fr));
+  gap:1rem;
+  max-width:1100px;
+  margin:0 auto;
+  position:relative;z-index:1;
+}
+.tech-card{
+  background:#ffffff;
+  border:1px solid var(--border);
+  border-radius:12px;
+  padding:1.6rem 1rem 1.2rem;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:.7rem;
+  cursor:default;
+  transition:all .25s;
+  position:relative;
+  overflow:hidden;
+}
+.tech-card::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;
+  height:2px;
+  background:var(--accent);
+  transform:scaleX(0);
+  transition:transform .3s;
+}
+.tech-card:hover::before{transform:scaleX(1)}
+.tech-card:hover{
+  background:#fff9f9;
+  border-color:var(--accent);
+  transform:translateY(-5px);
+  box-shadow:0 12px 32px rgba(193,18,31,.1);
+}
+.tech-card.hidden{display:none}
+.tech-card-icon{
+  width:3rem;height:3rem;
+  display:flex;align-items:center;justify-content:center;
+  font-size:2.6rem;
+}
+.tech-card-icon svg{width:2.8rem;height:2.8rem}
+.tech-card-name{
+  font-size:.78rem;
+  font-weight:600;
+  color:var(--text);
+  letter-spacing:.3px;
+  text-align:center;
+  font-family:'Inter',sans-serif;
+}
+.tech-card-cat{
+  font-size:.6rem;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  color:var(--dim);
+  font-family:'Inter',sans-serif;
+}
+@media(max-width:600px){
+  .tech-card-grid{grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:.7rem}
+  .tech-card{padding:1.2rem .8rem 1rem}
+}
 
-        .kpi-card h3 {
-            font-size: 2.5rem;
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 0.2rem;
-            letter-spacing: -1px;
-        }
+/* ── CERTS STRIP ── */
+#certs{
+  background:#ffffff;
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  padding:2.5rem 1.5rem;
+  text-align:center;
+}
+.cert-sublabel{
+  font-size:.62rem;
+  letter-spacing:4px;
+  text-transform:uppercase;
+  color:var(--dim);
+  margin-bottom:1.2rem;
+}
+.deploy-row,.cert-row{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:.7rem;
+  margin-bottom:1.2rem;
+}
+.deploy-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  background:var(--accent);
+  color:#0D1117;
+  border-radius:50px;
+  padding:.45rem 1.1rem;
+  font-size:.76rem;
+  font-weight:700;
+  transition:opacity .2s;
+}
+.deploy-btn:hover{opacity:.85}
+.deploy-btn-dark{
+  background:var(--bg-4);
+  color:var(--muted);
+  border:1px solid var(--border);
+  border-radius:50px;
+  padding:.45rem 1.1rem;
+  font-size:.76rem;
+  font-weight:600;
+  display:inline-flex;
+  align-items:center;
+  gap:.5rem;
+  transition:border-color .2s,color .2s;
+}
+.deploy-btn-dark:hover{border-color:var(--accent);color:var(--accent);opacity:1}
+.cert-pill{
+  display:inline-flex;
+  align-items:center;
+  gap:.4rem;
+  background:#ffffff;
+  border:1px solid #ddd;
+  border-radius:50px;
+  padding:.35rem .9rem;
+  font-size:.74rem;
+  color:#555;
+  transition:border-color .2s,color .2s;
+  box-shadow:0 1px 3px rgba(0,0,0,.06);
+}
+.cert-pill:hover{border-color:var(--accent);color:var(--accent)}
+.cert-pill i{color:var(--accent);font-size:.7rem}
 
-        .kpi-card p {
-            font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--text-muted);
-            margin: 0;
-        }
+/* ── FOOTER ── */
+footer{
+  background:var(--bg);
+  border-top:1px solid var(--border);
+  padding:2.5rem 2rem;
+  text-align:center;
+}
+.footer-row{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:1.5rem;
+  margin-bottom:1.2rem;
+}
+.footer-item{
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  font-size:.84rem;
+  color:var(--muted);
+}
+.footer-item i{color:var(--accent)}
+.footer-item a{color:var(--muted);border-bottom:none}
+.footer-item a:hover{color:var(--accent);opacity:1}
+.footer-divider{color:var(--border)}
+.copyright{font-size:.68rem;letter-spacing:2px;text-transform:uppercase;color:var(--dim)}
 
-        /* Project Cards Refinement */
-        .post {
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 30px rgba(0,0,0,0.03);
-            border: 1px solid #eee;
-            margin-bottom: 2rem;
-            transition: 0.3s;
-        }
+/* ── BIO MODAL ── */
+/* ── BIO OVERLAY — matches white project card style ── */
+#bio-overlay{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:9999;
+  overflow-y:auto;
+  background:rgba(248,248,246,0.97);
+  backdrop-filter:blur(12px);
+}
+.bio-inner{
+  max-width:820px;
+  margin:0 auto;
+  padding:2.5rem 2rem 5rem;
+}
 
-        .post:hover {
-            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
-        }
+/* Close row */
+.bio-close-row{text-align:right;margin-bottom:2rem}
+.bio-close-btn{
+  background:transparent;
+  border:1.5px solid var(--border);
+  color:var(--muted);
+  padding:.45rem 1.1rem;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:.78rem;
+  letter-spacing:1px;
+  font-family:var(--font-body);
+  transition:all .2s;
+  box-shadow:0 1px 4px rgba(0,0,0,.06);
+}
+.bio-close-btn:hover{border-color:var(--accent);color:var(--accent);background:var(--accent-dim)}
 
-        .icon-box {
-            height: 150px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: #fbfbfb;
-            font-size: 4rem;
-            color: #222;
-            border-bottom: 1px solid #f0f0f0;
-        }
+/* Hero block — matches featured card header feel */
+.bio-hero-block{
+  background:#ffffff;
+  border:1px solid var(--border);
+  border-top:3px solid var(--accent);
+  border-radius:16px;
+  padding:2.5rem 2rem;
+  text-align:center;
+  margin-bottom:2rem;
+  box-shadow:0 2px 12px rgba(0,0,0,.06);
+}
+.bio-hero-block h1{
+  font-size:clamp(1.5rem,4vw,2rem);
+  letter-spacing:4px;
+  color:var(--text);
+  margin-bottom:.4rem;
+  text-transform:uppercase;
+  font-family:var(--font-head);
+}
+.bio-title{
+  font-size:.75rem;
+  color:var(--accent);
+  letter-spacing:2.5px;
+  text-transform:uppercase;
+  margin-bottom:1.2rem;
+  font-weight:600;
+}
+.bio-hero-block p{
+  color:var(--muted);
+  max-width:540px;
+  margin:0 auto 1.5rem;
+  line-height:1.8;
+  font-size:.95rem;
+}
+.bio-hero-block p strong{color:var(--text)}
+.bio-contact-row{
+  display:flex;justify-content:center;flex-wrap:wrap;gap:1rem;
+}
+.bio-contact-row a{
+  display:inline-flex;align-items:center;gap:.4rem;
+  color:var(--muted);font-size:.82rem;border-bottom:none;
+  background:#f8f8f6;border:1px solid var(--border);
+  padding:.3rem .8rem;border-radius:50px;
+  transition:all .2s;
+}
+.bio-contact-row a i{color:var(--accent)}
+.bio-contact-row a:hover{
+  border-color:var(--accent);color:var(--accent);
+  background:var(--accent-dim);opacity:1;
+}
 
-        .project-impact-badge {
-            display: inline-block;
-            background: rgba(193, 18, 31, 0.1);
-            color: var(--primary-red);
-            padding: 0.5rem 1rem;
-            border-radius: 50px;
-            font-size: 0.75rem;
-            font-weight: 700;
-            margin-bottom: 1rem;
-        }
+/* Section blocks — white cards like project cards */
+.bio-section{
+  background:#ffffff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:1.8rem 2rem;
+  margin-bottom:1.2rem;
+  box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+.bio-section-title{
+  font-size:.6rem;letter-spacing:4px;text-transform:uppercase;
+  color:var(--accent);padding-bottom:.6rem;
+  border-bottom:1px solid var(--border);margin-bottom:1.2rem;
+  font-weight:700;
+}
+.bio-section p{color:var(--muted);line-height:1.9;font-size:.93rem;margin-bottom:.8rem}
+.bio-section p:last-child{margin-bottom:0}
+.bio-section p strong{color:var(--text)}
 
-        /* Navigation Smoothing */
-        #nav {
-            backdrop-filter: blur(10px);
-            background: rgba(255,255,255,0.9);
-        }
-        
-    </style>
-</head>
+/* Timeline */
+.tl-item{
+  display:grid;grid-template-columns:120px 1fr;gap:.8rem 1.5rem;
+  padding:1rem 0;border-bottom:1px solid #f0ede8;
+}
+.tl-item:last-child{border-bottom:none;padding-bottom:0}
+.tl-date{font-size:.68rem;color:var(--dim);letter-spacing:1px;padding-top:3px;line-height:1.5}
+.tl-role{font-weight:700;color:var(--text);margin-bottom:.15rem;font-size:.93rem}
+.tl-co{font-size:.78rem;color:var(--accent);margin-bottom:.35rem;font-weight:600}
+.tl-desc{font-size:.83rem;color:var(--muted);line-height:1.7}
 
-<body class="is-preload">
+/* Skill grid */
+.skill-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(170px,1fr));
+  gap:.7rem;
+}
+.skill-card{
+  background:#f8f8f6;
+  border:1px solid var(--border);
+  border-radius:8px;padding:.9rem 1.1rem;
+}
+.skill-card-title{
+  font-size:.58rem;letter-spacing:3px;text-transform:uppercase;
+  color:var(--accent);margin-bottom:.45rem;font-weight:700;
+}
+.skill-card p{font-size:.78rem;color:var(--muted);line-height:1.7;margin:0}
 
-    <div id="wrapper" class="fade-in">
+/* CTA */
+.bio-cta{
+  background:#ffffff;
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:2rem;
+  text-align:center;
+  box-shadow:0 2px 8px rgba(0,0,0,.05);
+}
+.bio-cta p{color:var(--muted);margin-bottom:1.2rem;font-size:.9rem}
 
-			
-		<div id="intro">
-			<h1>TLOTSO TSHEPANG PHETO</h1>
-			<p>
-				<strong>Data Analyst</strong> specializing in revenue optimization, process improvement, and predictive analytics. 
-				I transform raw datasets into executive-level insights using <strong>SQL, Python,Excel,Power BI, and Tableau</strong>.
-			</p>
-			<p style="font-size: 0.95rem; color: var(--text-muted); max-width: 700px; margin: 0 auto;">
-				My work focuses on <strong>measurable business impact</strong>, <strong>operational efficiency</strong>, and <strong>data-driven strategy</strong>.
-			</p>
-			<ul class="actions">
-				<li><a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a></li>
-			</ul>
-		</div>
-		<section class="kpi-section">
-			<div class="inner">
-				<header class="major" style="text-align: center; margin-bottom: 3rem;">
-					<h2 style="font-size: 1.5rem; letter-spacing: 3px; color: #fff;">STRATEGIC VALUE METRICS</h2>
-				</header>
-				<div class="kpi-grid">
-					<div class="kpi-card">
-						<i class="fas fa-chart-line"></i>
-						<h3>18%</h3>
-						<p>Revenue Optimization</p>
-					</div>
-					<div class="kpi-card">
-						<i class="fas fa-microchip"></i>
-						<h3>25%</h3>
-						<p>Process Efficiency</p>
-					</div>
-					<div class="kpi-card">
-						<i class="fas fa-magnifying-glass-chart"></i>
-						<h3>30%</h3>
-						<p>Predictive Accuracy</p>
-					</div>
-					<div class="kpi-card">
-						<i class="fas fa-briefcase"></i>
-						<h3>3.2x</h3>
-						<p>Operational ROI</p>
-					</div>
-				</div>
-			</div>
-		</section>
-        <header id="header">
-            <a href="index.html" class="logo">Strategic Portfolio 2026</a>
-        </header>
-        <nav id="nav">
-            <ul class="links">
-                <li class="active"><a href="index.html">Technical Projects</a></li>
-                <li><a href="https://www.linkedin.com/in/tlotso-tshepang-pheto-a0568bb9/" target="_blank">Professional Bio</a></li>
-            </ul>
-            <ul class="icons">
-                <li><a href="https://github.com/Tlotso" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-                <li><a href="https://www.linkedin.com/in/tlotso-tshepang-pheto-a0568bb9/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-            </ul>
-        </nav>
+/* ── RESPONSIVE ── */
+@media(max-width:768px){
+  nav#topnav{padding:.8rem 1.2rem}
+  .nav-links{gap:1rem}
+  #hero{padding:5rem 1.2rem 3rem}
+  .proj-grid{grid-template-columns:1fr}
+  .tl-item{grid-template-columns:1fr;gap:.4rem}
+  .footer-row{flex-direction:column;gap:.8rem}
+  .footer-divider{display:none}
+}
 
-        <div id="main">
+/* ── SCROLL PROGRESS BAR ── */
+#scroll-bar{
+  position:fixed;top:0;left:0;z-index:9999;
+  height:3px;width:0%;
+  background:var(--accent);
+  transition:width .1s linear;
+}
 
-            <article class="post featured">
-                <header class="major">
-                    <span class="project-impact-badge">FEATURED: PREDICTIVE ANALYTICS</span>
-                    <h2><a href="https://github.com/Tlotso/Global-_Water_Consumption_Analysis_2000-2025">Global Water Consumption and Depletion<br />Forecasting</a></h2>
-                    <p>Utilizing 25 years of time-series data to architect sustainability models for 100+ countries.</p>
-                </header>
-                <div class="icon-box">
-                    <i class="fas fa-droplet" style="color: #0077b6;"></i>
-                    
-                    
-                </div>
-                <p><strong>Methodology:</strong> Advanced EDA with interative visualizations and regression modeling using Python Scikit-Learn to predict usage trends through 2025.</p>
-                <ul class="actions special">
-                    <li><a href="https://github.com/Tlotso/Global-_Water_Consumption_Analysis_2000-2025" class="button">View Repository</a></li>
-                </ul>
-            </article>
+/* ── DOT GRID HERO TEXTURE ── */
+#hero::after{
+  content:'';
+  position:absolute;
+  inset:0;
+  background-image:radial-gradient(circle, rgba(193,18,31,.08) 1px, transparent 1px);
+  background-size:28px 28px;
+  pointer-events:none;
+  z-index:0;
+}
+#hero > *{position:relative;z-index:1}
 
-            <section class="posts">
-                <article>
-                    <header>
-                        <span class="project-impact-badge">SQL DATA ARCHITECTURE</span>
-                        <h2><a href="#">Public Health<br />Data Wrangling</a></h2>
-                    </header>
-                    <div class="icon-box">
-                        <i class="fas fa-database"></i>
-                    </div>
-                    <p>Optimizing complex COVID-19 datasets using CTEs and Window Functions for high-performance reporting.</p>
-                    <ul class="actions special">
-                        <li><a href="https://github.com/Tlotso/PortfolioProjects" class="button">Source Code</a></li>
-                    </ul>
-                </article>
+/* ── SCROLL REVEAL ── */
+.reveal{
+  opacity:0;
+  transform:translateY(28px);
+  transition:opacity .6s ease, transform .6s ease;
+}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.reveal-delay-1{transition-delay:.1s}
+.reveal-delay-2{transition-delay:.2s}
+.reveal-delay-3{transition-delay:.3s}
+.reveal-delay-4{transition-delay:.4s}
 
-                <article>
-    <header>
-        <span class="project-impact-badge">BUSINESS INTELLIGENCE & DATA MODELING</span>
-        <h2><a href="https://public.tableau.com/" target="_blank">Executive Performance<br />Strategy Dashboard</a></h2>
-    </header>
-    
-    <div class="icon-box">
-        <span style="display: inline-flex; align-items: center; justify-content: center; width: 5rem; height: 5rem;">
-            <svg viewBox="0 0 128 128" style="width: 100%; height: 100%;">
-                <path fill="#E97627" d="M59 10.6V0h10v10.6h10.7v10h-10.7v10.7H59V20.6H48.3v-10H59zM20.2 59H9.6V48.3h10V37.6h10.6v10.7h10.7V59H30.8v10.6H20.2V59zM118.4 59h-10.6V48.3h10V37.6h10.6v10.7h10.7V59h-10.7v10.6h-10.6V59zM69.4 117.4V128h-10v-10.6H48.7v-10h10.7V96.7h10v10.7h10.7v10H69.4zM64 74.3V53.7h20.6V33h10.7v20.7h20.7v10.6h-20.7v20.7h-10.7V64.3H64v10zM53.7 64.3V85h-10v10.7H33v-10.7H12.3V74.3H33V53.7h10.7v10.6h10z"/>
-            </svg>
-        </span>
-    </div>
+/* ── BACK TO TOP ── */
+#back-top{
+  position:fixed;
+  bottom:2rem;right:2rem;
+  width:42px;height:42px;
+  background:var(--accent);
+  color:#fff;
+  border:none;border-radius:50%;
+  font-size:1rem;
+  cursor:pointer;
+  display:none;
+  align-items:center;justify-content:center;
+  box-shadow:0 4px 16px rgba(193,18,31,.3);
+  transition:all .25s;
+  z-index:500;
+}
+#back-top:hover{transform:translateY(-3px);box-shadow:0 8px 24px rgba(193,18,31,.4)}
+#back-top.show{display:flex}
 
-    <div style="text-align: left; margin: 1.5rem 0; padding: 1.5rem; background: #fcfcfc; border-radius: 8px; border: 1px solid #eee;">
-        <h4 style="font-size: 0.7rem; color: #999; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem;">
-            <i class="fas fa-database" style="margin-right: 8px;"></i> Data Source Architecture
-        </h4>
-        <ul style="list-style: none; padding-left: 0; font-size: 0.85rem; line-height: 1.6;">
-            <li style="margin-bottom: 0.5rem; display: flex; align-items: flex-start;">
-                <i class="fas fa-file-csv" style="color: #27ae60; margin-top: 4px; margin-right: 12px;"></i>
-                <span><strong>Primary Sales Engine:</strong> Relational dataset containing 500k+ rows of transactional revenue.</span>
-            </li>
-            <li style="margin-bottom: 0.5rem; display: flex; align-items: flex-start;">
-                <i class="fas fa-users" style="color: #2980b9; margin-top: 4px; margin-right: 12px;"></i>
-                <span><strong>Customer Metadata:</strong> Demographic and churn data joined via unique User IDs.</span>
-            </li>
-            <li style="margin-bottom: 0.5rem; display: flex; align-items: flex-start;">
-                <i class="fas fa-cloud-arrow-down" style="color: #e67e22; margin-top: 4px; margin-right: 12px;"></i>
-                <span><strong>Market Index API:</strong> External JSON data used for year-over-year growth benchmarking.</span>
-            </li>
-        </ul>
-    </div>
+/* ── HERO TYPING CURSOR ── */
+.typing-cursor{
+  display:inline-block;
+  width:3px;height:.85em;
+  background:var(--accent);
+  margin-left:4px;
+  vertical-align:middle;
+  animation:blink .8s infinite;
+}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
 
-    <p>Architected a <strong>Unified Data Model</strong> by blending disparate sources, enabling leadership to identify a 15% discrepancy in regional performance metrics.</p>
+/* ── SECTION DIVIDER LINE ── */
+.section-rule{
+  width:48px;height:3px;
+  background:var(--accent);
+  margin-bottom:2rem;
+  border-radius:2px;
+}
 
-    <ul class="actions special">
-        <li><a href="https://public.tableau.com/" class="button small">Explore Live Dashboard</a></li>
-    </ul>
-</article>
-            </section>
-        </div>
+/* ── PROJECT CARD TAG LINE ── */
+.proj-meta{
+  display:flex;gap:.5rem;flex-wrap:wrap;
+  margin-bottom:.8rem;
+}
+.proj-tag{
+  font-size:.65rem;letter-spacing:1px;
+  text-transform:uppercase;
+  color:var(--accent);
+  background:var(--accent-dim);
+  padding:.2rem .6rem;border-radius:3px;
+  font-weight:600;
+}
 
-        <style>
+/* ── FEATURED CARD TOP ACCENT LINE ── */
+.featured-card{border-top:3px solid var(--accent) !important}
 
-/* Technical Stack Styling */
-        .tech-stack-section {
-            padding: 3rem 0;
-            background: #ffffff;
-            border-top: 1px solid #eee;
-            text-align: center;
-        }
+/* ── NAV UNDERLINE ACTIVE ── */
+.nav-links a.active{
+  position:relative;
+}
+.nav-links a.active::after{
+  content:'';position:absolute;
+  bottom:-4px;left:0;right:0;
+  height:2px;background:var(--accent);
+  border-radius:2px;
+}
 
-        .tech-stack-section h4 {
-            font-size: 0.7rem;
-            letter-spacing: 3px;
-            color: #999;
-            text-transform: uppercase;
-            margin-bottom: 2rem;
-        }
+/* ── HOVER LIFT ON NAV LINKS ── */
+.nav-links a{transition:color .2s, transform .2s}
+.nav-links a:hover{transform:translateY(-1px)}
 
-        .tech-grid {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            gap: 3rem;
-            flex-wrap: wrap;
-            filter: grayscale(100%);
-            opacity: 0.6;
-            transition: 0.5s ease;
-        }
+/* ── FOOTER TOP RULE ── */
+footer{border-top:3px solid var(--accent) !important}
 
-        .tech-grid:hover {
-            filter: grayscale(0%);
-            opacity: 1;
-        }
 
-        .tech-icon {
-            font-size: 2.5rem;
-            transition: transform 0.3s;
-        }
-
-        .tech-icon:hover {
-            transform: scale(1.2);
-        }
-
-        @media screen and (max-width: 736px) {
-            .tech-grid { gap: 1.5rem; }
-            .tech-icon { font-size: 2rem; }
-        }  
-        /* Force-render the Tableau glyph if the class fails */
-        .devicon-tableau-plain::before {
-            content: "\e9ba" !important; /* The precise Unicode for the Tableau logo */
-            font-family: 'devicon' !important;
-        }
-
-        /* Ensure the tech-grid items have enough width to show icons */
-        .tech-icon {
-            min-width: 40px;
-            text-align: center;
-        } 
-
-        
-    /* Minimalist Slim Footer */
-    #footer-slim {
-        background: #0a0a0a;
-        padding: 3rem 2rem;
-        border-top: 1px solid #222;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .footer-content {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 2rem;
-        flex-wrap: wrap;
-        margin-bottom: 1.5rem;
-    }
-
-    .footer-item {
-        font-size: 0.85rem;
-        letter-spacing: 1px;
-        color: #888;
-        display: flex;
-        align-items: center;
-        gap: 0.75rem;
-    }
-
-    .footer-item i {
-        color: var(--primary-red);
-        font-size: 1rem;
-    }
-
-    .footer-item a {
-        color: #fff;
-        text-decoration: none;
-        transition: color 0.3s;
-        border-bottom: none;
-    }
-
-    .footer-item a:hover {
-        color: var(--primary-red);
-    }
-
-    .footer-divider {
-        color: #333;
-        font-weight: 100;
-    }
-
-    .copyright-slim {
-        font-size: 0.7rem;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        color: #444;
-    }
-
-    @media screen and (max-width: 736px) {
-        .footer-content { flex-direction: column; gap: 1rem; }
-        .footer-divider { display: none; }
-    }
+@keyframes fadeInUp{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
 </style>
-<section class="tech-stack-section">
-    <h4>Core Technical Stack</h4>
-    <div class="tech-grid">
-        <i class="devicon-azuresqldatabase-plain colored tech-icon" title="SQL"></i>
-        
-        <i class="devicon-python-plain colored tech-icon" title="Python"></i>
-        
-        <i class="devicon-pandas-plain colored tech-icon" title="Pandas"></i>
-        
-       <span class="tech-icon" title="Tableau" style="display: inline-flex; align-items: center; justify-content: center; width: 2.5rem; height: 2.5rem;">
-        <svg viewBox="0 0 128 128" style="width: 100%; height: 100%;">
-        <path fill="#E97627" d="M59 10.6V0h10v10.6h10.7v10h-10.7v10.7H59V20.6H48.3v-10H59zM20.2 59H9.6V48.3h10V37.6h10.6v10.7h10.7V59H30.8v10.6H20.2V59zM118.4 59h-10.6V48.3h10V37.6h10.6v10.7h10.7V59h-10.7v10.6h-10.6V59zM69.4 117.4V128h-10v-10.6H48.7v-10h10.7V96.7h10v10.7h10.7v10H69.4zM64 74.3V53.7h20.6V33h10.7v20.7h20.7v10.6h-20.7v20.7h-10.7V64.3H64v10zM53.7 64.3V85h-10v10.7H33v-10.7H12.3V74.3H33V53.7h10.7v10.6h10z"/>
-        </svg>
-        </span>
-        
-        <i class="devicon-matplotlib-plain colored tech-icon" title="Matplotlib"></i>
-        
-        <i class="fas fa-chart-area tech-icon" style= "color: #4c72b0;" title="Seaborn"></i>
-        <i class="devicon-MySQL-plain colored tech-icon"  title="MySQL"></i>
+</head>
+<body>
 
-        <i class="fas fa-chart-bar tech-icon" style="color: #f2c811;" title="Power BI"></i>
-        
-        <i class="devicon-github-original tech-icon" style="color: #222;" title="GitHub"></i>
-    </div>
+<!-- ── NAV ─────────────────────────────────────────────────────────── -->
+<div id="scroll-bar"></div>
+<button id="back-top" title="Back to top"><i class="fas fa-arrow-up"></i></button>
+<nav id="topnav">
+  <div class="nav-logo">Strategic Portfolio 2026</div>
+  <ul class="nav-links">
+    <li><a href="#projects" class="active">Projects</a></li>
+    <li><a href="#" id="bio-trigger">Professional Bio</a></li>
+    <li><a href="https://github.com/Tlotso" target="_blank" class="icon-link"><i class="fab fa-github"></i></a></li>
+    <li><a href="https://www.linkedin.com/in/tlotso-tshepang-pheto-a0568bb9/" target="_blank" class="icon-link"><i class="fab fa-linkedin"></i></a></li>
+  </ul>
+</nav>
+
+<!-- ── HERO ────────────────────────────────────────────────────────── -->
+<section id="hero">
+  <div class="hero-overline">Data Analytics Portfolio · Gaborone, Botswana</div>
+  <h1>Tlotso<br/><span id="typed-name"></span><span class="typing-cursor" id="cursor"></span></h1>
+  <p class="hero-desc">
+    <strong>Data Analyst</strong> specializing in revenue optimization, process improvement, and predictive analytics.
+    I transform raw datasets into executive-level insights using
+    <strong>SQL, Python, Excel, Power BI, Tableau, Streamlit, and Prophet</strong>.
+  </p>
+  <p class="hero-sub">
+    My work focuses on <strong>measurable business impact</strong>, <strong>operational efficiency</strong>, and <strong>data-driven strategy</strong>.
+  </p>
+  <div class="hero-cta">
+    <a href="#projects" class="btn btn-gold"><i class="fas fa-folder-open"></i> View Projects</a>
+    <a href="#" id="bio-trigger-hero" class="btn btn-outline"><i class="fas fa-user"></i> Professional Bio</a>
+    <a href="https://github.com/Tlotso" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+  </div>
+  <div class="scroll-hint"><i class="fas fa-chevron-down"></i></div>
 </section>
-<footer id="footer-slim">
-    <div class="footer-content">
-        <div class="footer-item">
-            <i class="fas fa-location-dot"></i>
-            <span>Gaborone, Botswana</span>
+
+<!-- ── KPI STRIP ───────────────────────────────────────────────────── -->
+<section id="kpis">
+  <div class="kpi-label">Strategic Value Metrics — Aggregated Across All Portfolio Projects</div>
+  <div class="kpi-grid">
+    <div class="kpi-card reveal"><i class="fas fa-chart-line"></i><div class="kpi-num" id="kpi-revenue">0%</div><div class="kpi-desc">Revenue Optimization</div></div>
+    <div class="kpi-card reveal reveal-delay-1"><i class="fas fa-bolt"></i><div class="kpi-num" id="kpi-efficiency">0%</div><div class="kpi-desc">Query Performance Gain</div></div>
+    <div class="kpi-card reveal reveal-delay-2"><i class="fas fa-magnifying-glass-chart"></i><div class="kpi-num" id="kpi-accuracy">0%</div><div class="kpi-desc">Predictive Accuracy Gain</div></div>
+    <div class="kpi-card reveal reveal-delay-3"><i class="fas fa-database"></i><div class="kpi-num" id="kpi-records">0</div><div class="kpi-desc">Records Analysed</div></div>
+    <div class="kpi-card reveal reveal-delay-4"><i class="fas fa-globe"></i><div class="kpi-num" id="kpi-countries">0</div><div class="kpi-desc">Countries Modelled</div></div>
+    <div class="kpi-card reveal reveal-delay-4"><i class="fas fa-briefcase"></i><div class="kpi-num" id="kpi-roi">0x</div><div class="kpi-desc">Reporting ROI Delivered</div></div>
+  </div>
+</section>
+
+<!-- ── PROJECTS ────────────────────────────────────────────────────── -->
+<section class="content-section" id="projects">
+  <div class="section-label">Portfolio</div>
+  <div class="section-title">Technical Projects</div>
+  <div class="section-rule"></div>
+
+  <!-- FEATURED -->
+  <div class="featured-card reveal">
+    <div class="featured-icon-bar"><i class="fas fa-chart-line"></i></div>
+    <div class="featured-body">
+      <span class="proj-badge">★ FEATURED · LIVE STREAMLIT APP · FORECASTING</span>
+      <h2><a href="https://Revenue-Intelligence-Command-Center-tlotso.streamlit.app/" target="_blank">Revenue Intelligence &amp; Scenario Forecasting Command Center</a></h2>
+      <p>A deployed Leading Indicator Command Center — not a static report, but an interactive stress-testing tool for revenue strategy.</p>
+      <div class="engine-box">
+        <div class="engine-label"><i class="fas fa-brain" style="margin-right:6px;color:var(--accent)"></i>Intelligence Engine</div>
+        <ul class="engine-list">
+          <li><i class="fas fa-wave-square" style="color:var(--accent)"></i><span><strong style="color:var(--text)">Forecasting Model:</strong> <span style="color:var(--muted)">Holt-Winters Exponential Smoothing — capturing trends and seasonal fluctuations across time horizons.</span></span></li>
+          <li><i class="fas fa-sliders" style="color:#2980b9"></i><span><strong style="color:var(--text)">Scenario Engine:</strong> <span style="color:var(--muted)">3-tier Worst/Base/Best case selector for Opex planning and capital allocation decisions.</span></span></li>
+          <li><i class="fas fa-triangle-exclamation" style="color:#e67e22"></i><span><strong style="color:var(--text)">Risk Alerts:</strong> <span style="color:var(--muted)">Auto-triggers Cost Optimisation alert if projected margin falls below 10%.</span></span></li>
+        </ul>
+      </div>
+      <p class="stack-line"><strong>Stack:</strong> Python · Pandas · Statsmodels · Streamlit · Plotly · Superstore Dataset</p>
+      <div class="btn-row">
+        <a href="https://Revenue-Intelligence-Command-Center-tlotso.streamlit.app/" target="_blank" class="btn btn-gold"><i class="fas fa-rocket"></i> Launch Live App</a>
+        <a href="https://github.com/Tlotso/Revenue-Intelligence-Command-Center" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub Repo</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- GRID -->
+  <div class="proj-grid">
+
+    <div class="proj-card reveal">
+      <div class="proj-icon-bar"><i class="fas fa-droplet" style="color:#0077b6"></i></div>
+      <div class="proj-body">
+        <span class="proj-badge">LIVE DASHBOARD · PREDICTIVE ANALYTICS · 100+ COUNTRIES</span> <span class="proj-badge" style="background:rgba(255,75,75,.08);color:#FF4B4B;border-color:rgba(255,75,75,.2);margin-left:.3rem"><svg width="10" height="8" viewBox="0 0 200 150" style="vertical-align:middle;margin-right:3px"><polygon points="100,5 190,140 10,140" fill="none" stroke="#FF4B4B" stroke-width="20"/><polygon points="100,50 160,140 40,140" fill="#FF4B4B"/></svg>Streamlit</span>
+        <h3><a href="https://github.com/Tlotso/Global-_Water_Consumption_Analysis_2000-2025" target="_blank">Global Water Consumption &amp; 2030 Risk Portal</a></h3>
+        <p>25-year time-series analysis turned into an automated operational Streamlit dashboard — tracking production, loss accounting, and 2030 groundwater scarcity KPIs across 100+ countries. ~15–20 nations flagged as High Risk.</p>
+        <p class="proj-stack"><strong>Stack:</strong> Python · Scikit-Learn · Pandas · Plotly · Streamlit · Automated ETL</p>
+        <div class="btn-row">
+          <a href="https://github.com/Tlotso/Global-_Water_Consumption_Analysis_2000-2025" target="_blank" class="btn btn-outline" style="font-size:.75rem;padding:.5rem 1.2rem"><i class="fab fa-github"></i> View Repository</a>
+          <a href="https://github.com/Tlotso/Global-_Water_Consumption_Analysis_2000-2025" target="_blank" class="btn btn-gold" style="font-size:.75rem;padding:.5rem 1.2rem;background:#FF4B4B;border-color:#FF4B4B"><svg width="12" height="10" viewBox="0 0 200 150" style="vertical-align:middle;margin-right:4px"><polygon points="100,5 190,140 10,140" fill="none" stroke="#fff" stroke-width="20"/><polygon points="100,50 160,140 40,140" fill="#fff"/></svg> Launch App</a>
         </div>
-
-        <span class="footer-divider">|</span>
-
-        <div class="footer-item">
-            <i class="fas fa-envelope"></i>
-            <a href="mailto:tlotsopheto@gmail.com">tlotsopheto@gmail.com</a>
-        </div>
-
-        <span class="footer-divider">|</span>
-
-        <div class="footer-item">
-            <a href="https://github.com/Tlotso" target="_blank" class="icon brands fa-github" title="GitHub"></a>
-            <a href="https://www.linkedin.com/in/tlotso-tshepang-pheto-a0568bb9/" target="_blank" class="icon brands fa-linkedin" title="LinkedIn"></a>
-        </div>
+      </div>
     </div>
 
-    <div class="copyright-slim">
-        &copy; 2026 Tlotso T Pheto &bull; Strategic Analytics Portfolio
+    <div class="proj-card reveal">
+      <div class="proj-icon-bar"><i class="fas fa-users"></i></div>
+      <div class="proj-body">
+        <span class="proj-badge">ML · CUSTOMER ANALYTICS · 500K+ RECORDS</span> <span class="proj-badge" style="background:rgba(255,75,75,.08);color:#FF4B4B;border-color:rgba(255,75,75,.2);margin-left:.3rem"><svg width="10" height="8" viewBox="0 0 200 150" style="vertical-align:middle;margin-right:3px"><polygon points="100,5 190,140 10,140" fill="none" stroke="#FF4B4B" stroke-width="20"/><polygon points="100,50 160,140 40,140" fill="#FF4B4B"/></svg>Streamlit</span>
+        <h3><a href="https://github.com/Tlotso/RFM_Segmentation_Model" target="_blank">E-Commerce Revenue &amp; Churn Analysis (RFM)</a></h3>
+        <p>Full RFM segmentation engine on the Olist dataset — scoring every customer across Recency, Frequency, and Monetary dimensions into four tiers: Champions, Loyal, At Risk, Lost. Includes geographical churn mapping and cohort retention analysis.</p>
+        <p class="proj-stack"><strong>Stack:</strong> Python · Pandas · Scikit-Learn · Seaborn · Jupyter</p>
+        <div class="btn-row">
+          <a href="https://github.com/Tlotso/RFM_Segmentation_Model" target="_blank" class="btn btn-outline" style="font-size:.75rem;padding:.5rem 1.2rem"><i class="fab fa-github"></i> View Repository</a>
+          <a href="https://github.com/Tlotso/RFM_Segmentation_Model" target="_blank" class="btn btn-gold" style="font-size:.75rem;padding:.5rem 1.2rem;background:#FF4B4B;border-color:#FF4B4B"><svg width="12" height="10" viewBox="0 0 200 150" style="vertical-align:middle;margin-right:4px"><polygon points="100,5 190,140 10,140" fill="none" stroke="#fff" stroke-width="20"/><polygon points="100,50 160,140 40,140" fill="#fff"/></svg> Launch App</a>
+        </div>
+      </div>
     </div>
+
+    <div class="proj-card reveal">
+      <div class="proj-icon-bar">
+        <svg viewBox="0 0 128 128" style="width:3rem;height:3rem"><path fill="#E97627" d="M59 10.6V0h10v10.6h10.7v10h-10.7v10.7H59V20.6H48.3v-10H59zM20.2 59H9.6V48.3h10V37.6h10.6v10.7h10.7V59H30.8v10.6H20.2V59zM118.4 59h-10.6V48.3h10V37.6h10.6v10.7h10.7V59h-10.7v10.6h-10.6V59zM69.4 117.4V128h-10v-10.6H48.7v-10h10.7V96.7h10v10.7h10.7v10H69.4zM64 74.3V53.7h20.6V33h10.7v20.7h20.7v10.6h-20.7v20.7h-10.7V64.3H64v10zM53.7 64.3V85h-10v10.7H33v-10.7H12.3V74.3H33V53.7h10.7v10.6h10z"/></svg>
+      </div>
+      <div class="proj-body">
+        <span class="proj-badge">BUSINESS INTELLIGENCE · TABLEAU · DATA MODELLING</span>
+        <h3><a href="https://public.tableau.com/app/profile/tlotso" target="_blank">Executive Performance Strategy Dashboard</a></h3>
+        <p>Unified three disparate data sources — 500K+ transactional rows, customer metadata, and a live Market Index API — into a single executive reporting layer. Surfaced a 15% regional performance gap previously invisible to leadership.</p>
+        <p class="proj-stack"><strong>Stack:</strong> Tableau · SQL · ETL · Data Modelling · Excel</p>
+        <a href="https://public.tableau.com/app/profile/tlotso" target="_blank" class="btn btn-outline" style="font-size:.75rem;padding:.5rem 1.2rem"><i class="fas fa-chart-bar"></i> Explore Dashboard</a>
+      </div>
+    </div>
+
+    <div class="proj-card reveal">
+  <div class="proj-icon-bar"><i class="fas fa-database" style="color:#2980b9"></i></div>
+  <div class="proj-body">
+    <span class="proj-badge">SQL ENGINEERING · TABLEAU · 500K+ RECORDS</span>
+    <h3>COVID-19 Global Data Architecture & Wrangling</h3>
+    <p>Architected high-performance epidemiological pipelines. I used <strong>CTEs</strong> to organize complex multi-stage aggregations and <strong>Window Functions</strong> (PARTITION BY) to calculate rolling vaccination rates and infection trends across 500K+ rows.</p>
+    
+    <div class="engine-box" style="padding: 1rem; margin-bottom: 1rem; background: var(--bg-2);">
+       <ul class="engine-list" style="font-size: 0.8rem; list-style: none;">
+          <li><i class="fas fa-code" style="color:var(--accent)"></i> <strong>Advanced SQL:</strong> CTEs, Window Functions, Joins, & Data Type Conversions.</li>
+          <li><i class="fas fa-gauge-high" style="color:var(--accent)"></i> <strong>Optimization:</strong> Achieved 40% query speed increase via logic refactoring.</li>
+          <li><i class="fas fa-chart-pie" style="color:var(--accent)"></i> <strong>BI Layer:</strong> Integrated cleaned SQL outputs directly into Tableau.</li>
+       </ul>
+    </div>
+
+    <p class="proj-stack"><strong>Stack:</strong> SQL Server · T-SQL · Tableau · Excel</p>
+    <div class="btn-row" style="margin-top: 10px;">
+      <a href="https://public.tableau.com/app/profile/tlotso" target="_blank" class="btn btn-gold" style="font-size:.7rem; padding:.4rem 1rem;">
+        <i class="fas fa-chart-bar"></i> View Tableau Viz
+      </a>
+      <a href="https://github.com/Tlotso/PortfolioProjects" target="_blank" class="btn btn-outline" style="font-size:.7rem; padding:.4rem 1rem;">
+        <i class="fab fa-github"></i> View SQL Code
+      </a>
+    </div>
+  </div>
+</div>
+
+  
+  <div class="proj-card reveal">
+  <div class="proj-icon-bar"><i class="fab fa-aws" style="color:#FF9900"></i></div>
+  <div class="proj-body">
+    <span class="proj-badge">AWS ARCHITECTURE · CLOUD ETL · WUC PROTOTYPE</span>
+    <h3>Cloud-Native Water Usage (WUC) Intelligence</h3>
+    <p>Architected a serverless data pipeline prototype to automate the ingestion and analysis of water consumption logs. Focused on building a secure, scalable "SQL-on-S3" environment for operational reporting.</p>
+    
+    <div class="engine-box" style="padding: 1rem; margin-bottom: 1rem; background: var(--bg-2);">
+       <ul class="engine-list" style="font-size: 0.8rem; list-style: none;">
+          <li><i class="fas fa-lock" style="color:var(--accent)"></i> <strong>IAM:</strong> Engineered granular security policies for data privacy.</li>
+          <li><i class="fas fa-database" style="color:var(--accent)"></i> <strong>S3 & Athena:</strong> Created a searchable Data Lake for ad-hoc SQL analysis.</li>
+          <li><i class="fas fa-code-branch" style="color:var(--accent)"></i> <strong>Lambda:</strong> Automated ETL triggers to reduce manual data handling.</li>
+       </ul>
+    </div>
+    
+    <p class="proj-stack"><strong>Stack:</strong> AWS S3 · Lambda · Athena · IAM · CloudWatch</p>
+    <div class="btn-row" style="margin-top: 10px;">
+      <span class="btn btn-outline" style="font-size:.7rem; padding:.4rem 1rem; cursor: default; border-style: dashed; color: var(--dim);">
+        <i class="fas fa-eye-slash"></i> Internal Corporate Prototype (Code Restricted)
+      </span>
+    </div>
+  </div>
+
+</section>
+
+<!-- ── TECH STACK ───────────────────────────────────────────────────── -->
+<section id="techstack">
+  <div class="tech-section-head">
+    <h2>Support for the technologies you love</h2>
+    <p>Best-in-class toolkit for data science, business intelligence, and analytics engineering.</p>
+  </div>
+
+  <!-- Filter tabs -->
+  <div class="tech-filters">
+    <button class="tech-filter-btn active" data-filter="all">All</button>
+    <button class="tech-filter-btn" data-filter="languages">Languages</button>
+    <button class="tech-filter-btn" data-filter="bi">BI & Visualisation</button>
+    <button class="tech-filter-btn" data-filter="data">Data & ML</button>
+    <button class="tech-filter-btn" data-filter="cloud">Cloud & DevOps</button>
+    <button class="tech-filter-btn" data-filter="tools">Tools</button>
+    <button class="tech-filter-btn" data-filter="live">🚀 Live Apps</button>
+  </div>
+
+  <!-- Card grid -->
+  <div class="tech-card-grid" id="techCardGrid">
+
+    <!-- Languages -->
+    <div class="tech-card" data-cat="languages">
+      <div class="tech-card-icon"><i class="devicon-python-plain colored"></i></div>
+      <div class="tech-card-name">Python</div>
+      <div class="tech-card-cat">Language</div>
+    </div>
+    <div class="tech-card" data-cat="languages">
+      <div class="tech-card-icon"><i class="devicon-azuresqldatabase-plain colored"></i></div>
+      <div class="tech-card-name">SQL / T-SQL</div>
+      <div class="tech-card-cat">Language</div>
+    </div>
+    <div class="tech-card" data-cat="languages">
+      <div class="tech-card-icon"><i class="devicon-r-plain colored"></i></div>
+      <div class="tech-card-name">R</div>
+      <div class="tech-card-cat">Language</div>
+    </div>
+
+    <!-- Data & ML -->
+    <div class="tech-card" data-cat="data">
+      <div class="tech-card-icon"><i class="devicon-pandas-plain colored"></i></div>
+      <div class="tech-card-name">Pandas</div>
+      <div class="tech-card-cat">Data</div>
+    </div>
+    <div class="tech-card" data-cat="data">
+      <div class="tech-card-icon"><i class="devicon-numpy-plain colored"></i></div>
+      <div class="tech-card-name">NumPy</div>
+      <div class="tech-card-cat">Data</div>
+    </div>
+    <div class="tech-card" data-cat="data">
+      <div class="tech-card-icon"><i class="devicon-scikitlearn-plain colored"></i></div>
+      <div class="tech-card-name">Scikit-Learn</div>
+      <div class="tech-card-cat">ML</div>
+    </div>
+    <div class="tech-card" data-cat="data">
+      <div class="tech-card-icon"><i class="devicon-matplotlib-plain colored"></i></div>
+      <div class="tech-card-name">Matplotlib</div>
+      <div class="tech-card-cat">Visualisation</div>
+    </div>
+    <div class="tech-card" data-cat="data">
+      <div class="tech-card-icon" style="color:#4c72b0;font-size:2.4rem"><i class="fas fa-chart-area"></i></div>
+      <div class="tech-card-name">Seaborn</div>
+      <div class="tech-card-cat">Visualisation</div>
+    </div>
+    <div class="tech-card" data-cat="data">
+      <div class="tech-card-icon"><svg viewBox="0 0 128 128"><polyline points="10,90 30,55 50,70 70,30 90,50 118,20" fill="none" stroke="#4267B2" stroke-width="8" stroke-linecap="round" stroke-linejoin="round"/><circle cx="118" cy="20" r="6" fill="#4267B2"/></svg></div>
+      <div class="tech-card-name">Prophet</div>
+      <div class="tech-card-cat">Forecasting</div>
+    </div>
+    <div class="tech-card" data-cat="data">
+      <div class="tech-card-icon"><i class="devicon-mysql-plain colored"></i></div>
+      <div class="tech-card-name">MySQL</div>
+      <div class="tech-card-cat">Database</div>
+    </div>
+    <div class="tech-card" data-cat="data">
+      <div class="tech-card-icon"><i class="devicon-mongodb-plain colored"></i></div>
+      <div class="tech-card-name">MongoDB</div>
+      <div class="tech-card-cat">Database</div>
+    </div>
+
+    <!-- BI & Visualisation -->
+    <div class="tech-card" data-cat="bi">
+      <div class="tech-card-icon"><svg viewBox="0 0 128 128"><path fill="#E97627" d="M59 10.6V0h10v10.6h10.7v10h-10.7v10.7H59V20.6H48.3v-10H59zM20.2 59H9.6V48.3h10V37.6h10.6v10.7h10.7V59H30.8v10.6H20.2V59zM118.4 59h-10.6V48.3h10V37.6h10.6v10.7h10.7V59h-10.7v10.6h-10.6V59zM69.4 117.4V128h-10v-10.6H48.7v-10h10.7V96.7h10v10.7h10.7v10H69.4zM64 74.3V53.7h20.6V33h10.7v20.7h20.7v10.6h-20.7v20.7h-10.7V64.3H64v10zM53.7 64.3V85h-10v10.7H33v-10.7H12.3V74.3H33V53.7h10.7v10.6h10z"/></svg></div>
+      <div class="tech-card-name">Tableau</div>
+      <div class="tech-card-cat">BI</div>
+    </div>
+    <div class="tech-card" data-cat="bi">
+      <div class="tech-card-icon" style="font-size:2.4rem;color:#f2c811"><i class="fas fa-chart-bar"></i></div>
+      <div class="tech-card-name">Power BI</div>
+      <div class="tech-card-cat">BI</div>
+    </div>
+    <div class="tech-card" data-cat="bi">
+      <div class="tech-card-icon"><svg viewBox="0 0 200 150"><polygon points="100,10 190,140 10,140" fill="none" stroke="#FF4B4B" stroke-width="14"/><polygon points="100,50 160,140 40,140" fill="#FF4B4B"/></svg></div>
+      <div class="tech-card-name">Streamlit</div>
+      <div class="tech-card-cat">Dashboard</div>
+    </div>
+    <div class="tech-card" data-cat="bi">
+      <div class="tech-card-icon"><svg viewBox="0 0 128 128"><rect x="8" y="8" width="112" height="112" rx="12" fill="#068D9D"/><rect x="22" y="36" width="28" height="56" rx="4" fill="#fff" opacity=".9"/><rect x="58" y="22" width="28" height="70" rx="4" fill="#fff" opacity=".9"/><rect x="94" y="48" width="20" height="44" rx="4" fill="#fff" opacity=".7"/></svg></div>
+      <div class="tech-card-name">Panel</div>
+      <div class="tech-card-cat">Dashboard</div>
+    </div>
+    <div class="tech-card" data-cat="bi">
+      <div class="tech-card-icon"><svg viewBox="0 0 128 128"><rect x="8" y="8" width="112" height="112" rx="10" fill="#217346"/><text x="64" y="56" text-anchor="middle" font-size="24" font-family="Arial" font-weight="900" fill="#fff">XLS</text><line x1="22" y1="68" x2="106" y2="68" stroke="#fff" stroke-width="4" opacity=".5"/><line x1="22" y1="82" x2="106" y2="82" stroke="#fff" stroke-width="4" opacity=".5"/><line x1="64" y1="60" x2="64" y2="108" stroke="#fff" stroke-width="4" opacity=".5"/></svg></div>
+      <div class="tech-card-name">Excel</div>
+      <div class="tech-card-cat">BI</div>
+    </div>
+
+    <!-- Cloud & DevOps -->
+    <div class="tech-card" data-cat="cloud">
+      <div class="tech-card-icon"><i class="devicon-amazonwebservices-plain-wordmark colored"></i></div>
+      <div class="tech-card-name">AWS</div>
+      <div class="tech-card-cat">Cloud</div>
+    </div>
+    <div class="tech-card" data-cat="cloud">
+      <div class="tech-card-icon" style="font-size:2.4rem;color:#FF9900"><i class="fas fa-bolt"></i></div>
+      <div class="tech-card-name">AWS Lambda</div>
+      <div class="tech-card-cat">Serverless</div>
+    </div>
+    <div class="tech-card" data-cat="cloud">
+      <div class="tech-card-icon" style="font-size:2.4rem;color:#3B48CC"><i class="fas fa-box-archive"></i></div>
+      <div class="tech-card-name">AWS S3</div>
+      <div class="tech-card-cat">Data Lake</div>
+    </div>
+    <div class="tech-card" data-cat="cloud">
+      <div class="tech-card-icon" style="font-size:2.4rem;color:#00A1E0"><i class="fas fa-search"></i></div>
+      <div class="tech-card-name">AWS Athena</div>
+      <div class="tech-card-cat">SQL</div>
+    </div>
+    <div class="tech-card" data-cat="cloud">
+      <div class="tech-card-icon"><i class="devicon-github-original" style="color:#1a1a1a"></i></div>
+      <div class="tech-card-name">GitHub</div>
+      <div class="tech-card-cat">Version Control</div>
+    </div>
+
+    <!-- Tools -->
+    <div class="tech-card" data-cat="tools">
+      <div class="tech-card-icon"><i class="devicon-vscode-plain colored"></i></div>
+      <div class="tech-card-name">VS Code</div>
+      <div class="tech-card-cat">IDE</div>
+    </div>
+    <div class="tech-card" data-cat="tools">
+      <div class="tech-card-icon"><i class="devicon-jupyter-plain colored"></i></div>
+      <div class="tech-card-name">Jupyter</div>
+      <div class="tech-card-cat">Notebook</div>
+    </div>
+    <div class="tech-card" data-cat="tools">
+      <div class="tech-card-icon"><i class="devicon-git-plain colored"></i></div>
+      <div class="tech-card-name">Git</div>
+      <div class="tech-card-cat">Version Control</div>
+    </div>
+    <div class="tech-card" data-cat="tools">
+      <div class="tech-card-icon"><svg viewBox="0 0 128 128"><rect x="8" y="8" width="112" height="112" rx="10" fill="#049fd9"/><rect x="18" y="52" width="14" height="18" rx="2" fill="#fff"/><rect x="38" y="40" width="14" height="30" rx="2" fill="#fff"/><rect x="58" y="26" width="14" height="44" rx="2" fill="#fff"/><rect x="78" y="40" width="14" height="30" rx="2" fill="#fff"/><rect x="98" y="52" width="14" height="18" rx="2" fill="#fff"/><text x="64" y="112" text-anchor="middle" font-size="11" font-family="Arial" font-weight="bold" fill="#fff">AIBIZ</text></svg></div>
+      <div class="tech-card-name">Cisco AIBIZ</div>
+      <div class="tech-card-cat">Certification</div>
+    </div>
+    <div class="tech-card" data-cat="tools">
+      <div class="tech-card-icon"><svg viewBox="0 0 128 128"><rect x="8" y="8" width="112" height="112" rx="10" fill="#008dc9"/><text x="64" y="72" text-anchor="middle" font-size="28" font-family="Arial" font-weight="bold" fill="#fff">DHIS</text></svg></div>
+      <div class="tech-card-name">DHIS2</div>
+      <div class="tech-card-cat">Health Systems</div>
+    </div>
+
+    <!-- Live Streamlit Apps -->
+    <div class="tech-card" data-cat="live" style="border-top:3px solid #FF4B4B">
+      <div class="tech-card-icon"><svg viewBox="0 0 200 150" style="width:2.8rem;height:2.8rem"><polygon points="100,10 190,140 10,140" fill="none" stroke="#FF4B4B" stroke-width="14"/><polygon points="100,50 160,140 40,140" fill="#FF4B4B"/></svg></div>
+      <div class="tech-card-name" style="text-align:center">Revenue Intelligence<br/>Command Center</div>
+      <div class="tech-card-cat">Live Streamlit App</div>
+      <a href="https://Revenue-Intelligence-Command-Center-tlotso.streamlit.app/" target="_blank" style="font-size:.65rem;color:#FF4B4B;border-bottom:none;margin-top:.2rem;font-weight:600">Open ↗</a>
+    </div>
+    <div class="tech-card" data-cat="live" style="border-top:3px solid #0077b6">
+      <div class="tech-card-icon"><i class="fas fa-droplet" style="font-size:2.4rem;color:#0077b6"></i></div>
+      <div class="tech-card-name" style="text-align:center">Water Crisis<br/>2030 Risk Portal</div>
+      <div class="tech-card-cat">Live Streamlit App</div>
+      <a href="https://github.com/Tlotso/Global-_Water_Consumption_Analysis_2000-2025" target="_blank" style="font-size:.65rem;color:#0077b6;border-bottom:none;margin-top:.2rem;font-weight:600">View ↗</a>
+    </div>
+    <div class="tech-card" data-cat="live" style="border-top:3px solid #27ae60">
+      <div class="tech-card-icon"><i class="fas fa-users" style="font-size:2.4rem;color:#27ae60"></i></div>
+      <div class="tech-card-name" style="text-align:center">RFM Segmentation<br/>&amp; Churn Analysis</div>
+      <div class="tech-card-cat">Live Streamlit App</div>
+      <a href="https://github.com/Tlotso/RFM_Segmentation_Model" target="_blank" style="font-size:.65rem;color:#27ae60;border-bottom:none;margin-top:.2rem;font-weight:600">View ↗</a>
+    </div>
+
+  </div>
+</section>
+
+
+
+<!-- ── FOOTER ───────────────────────────────────────────────────────── -->
+<footer>
+  <div class="footer-row">
+    <div class="footer-item"><i class="fas fa-location-dot"></i> <span>Gaborone, Botswana</span></div>
+    <span class="footer-divider">|</span>
+    <div class="footer-item"><i class="fas fa-envelope"></i> <a href="mailto:tlotsopheto@gmail.com">tlotsopheto@gmail.com</a></div>
+    <span class="footer-divider">|</span>
+    <div class="footer-item">
+      <a href="https://github.com/Tlotso" target="_blank" style="color:#333;border-bottom:none"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/tlotso-tshepang-pheto-a0568bb9/" target="_blank" style="color:#333;border-bottom:none"><i class="fab fa-linkedin"></i></a>
+    </div>
+  </div>
+  <div class="copyright">&copy; 2026 Tlotso T Pheto &bull; Strategic Analytics Portfolio</div>
 </footer>
 
+<!-- ── BIO MODAL ────────────────────────────────────────────────────── -->
+<div id="bio-overlay">
+  <div class="bio-inner">
+    <div class="bio-close-row"><button class="bio-close-btn" id="bio-close">✕ &nbsp;CLOSE</button></div>
+
+    <div class="bio-hero-block">
+      <h1>Tlotso Tshepang Pheto</h1>
+      <div class="bio-title">Junior Data Analyst &nbsp;·&nbsp; Business Intelligence &nbsp;·&nbsp; Revenue & Operations Intelligence</div>
+      <p>Based in <strong>Gaborone, Botswana</strong> — turning complex datasets into decisions that move organisations forward. My work sits at the intersection of analytics, business intelligence, and operational strategy.</p>
+      <div class="bio-contact-row">
+        <a href="mailto:tlotsopheto@gmail.com"><i class="fas fa-envelope"></i> tlotsopheto@gmail.com</a>
+        
+        <a href="https://github.com/Tlotso" target="_blank"><i class="fab fa-github"></i> github.com/Tlotso</a>
+        <a href="https://www.linkedin.com/in/tlotso-tshepang-pheto-a0568bb9/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
     </div>
 
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/main.js"></script>
+    <div class="bio-section">
+      <div class="bio-section-title">About Me</div>
+      <p>I am a junior data analyst with a background spanning <strong>healthcare data systems</strong>, <strong>supply chain analytics</strong>, and <strong>revenue intelligence</strong>. My experience was built inside organisations where data accuracy had real consequences — medicine availability at Central Medical Stores, district health reporting for the Ministry of Health — not just dashboards for their own sake.</p>
+      <p>Alongside operational experience, I have built end-to-end projects: a <strong>live Streamlit forecasting app</strong> using Holt-Winters exponential smoothing, a <strong>global water crisis risk model</strong> across 100+ countries, and an <strong>RFM customer segmentation engine</strong> on 500K+ records. I hold a <strong>BSc (Hons) in Computing — Business Intelligence & Data Analytics</strong> and am a <strong>Cisco Certified AI Business Practitioner (AIBIZ)</strong>.</p>
+    </div>
+
+    <div class="bio-section">
+      <div class="bio-section-title">Experience</div>
+      <div class="tl-item"><div class="tl-date">03/2025 — Present</div><div><div class="tl-role">Operational & Revenue Intelligence Associate</div><div class="tl-co">Rooteddeck · Gaborone</div><div class="tl-desc">KPI frameworks, revenue assurance proposals, governance workflows, and dashboard concepts during organisational incubation phase.</div></div></div>
+      <div class="tl-item"><div class="tl-date">05/2024 — 01/2025</div><div><div class="tl-role">Data Clerk</div><div class="tl-co">Chemonics Botswana · Central Medical Stores</div><div class="tl-desc">Data entry, cleaning, validation, and QA across healthcare supply chain datasets in a regulated public health environment.</div></div></div>
+      <div class="tl-item"><div class="tl-date">03/2022 — 10/2024</div><div><div class="tl-role">IT Officer</div><div class="tl-co">Chemonics Botswana · Serowe District</div><div class="tl-desc">Managed DHIS2 Vaccine Tracker and produced monthly BI reports for Ministry of Health stakeholders.</div></div></div>
+    </div>
+
+    <div class="bio-section">
+      <div class="bio-section-title">Core Skills</div>
+      <div class="skill-grid">
+        <div class="skill-card"><div class="skill-card-title">BI & Visualisation</div><p>Power BI, Tableau, Streamlit, Panel, Plotly, Matplotlib, Seaborn, Excel</p></div>
+        <div class="skill-card"><div class="skill-card-title">Programming & SQL</div><p>Python (Pandas, Scikit-Learn, NumPy, Prophet), SQL/T-SQL, R, SPSS</p></div>
+        <div class="skill-card"><div class="skill-card-title">Analytics & ML</div><p>RFM Segmentation, Holt-Winters, KPI Monitoring, Predictive Analytics, Time-Series</p></div>
+        <div class="skill-card"><div class="skill-card-title">Soft Skills</div><p>Stakeholder Management, Business Acumen, Results Orientation, Communication to Non-technical Audiences</p></div>
+      </div>
+    </div>
+
+    <div class="bio-section">
+      <div class="bio-section-title">Certifications</div>
+      <div class="cert-row" style="justify-content:flex-start">
+        <span class="cert-pill"><i class="fas fa-certificate"></i> Cisco AIBIZ</span>
+        <span class="cert-pill"><i class="fas fa-certificate"></i> Tableau — Coursera</span>
+        <span class="cert-pill"><i class="fas fa-certificate"></i> ML with Python — DataCamp</span>
+        <span class="cert-pill"><i class="fas fa-certificate"></i> Python for Data Science</span>
+        <span class="cert-pill"><i class="fas fa-certificate"></i> DHIS2 Academy 2023</span>
+        <span class="cert-pill"><i class="fas fa-certificate"></i> CCNA Levels 1–4</span>
+      </div>
+    </div>
+
+    <div class="bio-cta">
+      <p>Open to Data Analyst, BI Analyst, and Revenue Intelligence roles in Botswana and remotely.</p>
+      <a href="mailto:tlotsopheto@gmail.com" class="btn btn-gold" style="margin:.3rem"><i class="fas fa-envelope"></i> Get In Touch</a>
+      <a href="https://www.linkedin.com/in/tlotso-tshepang-pheto-a0568bb9/" target="_blank" class="btn btn-outline" style="margin:.3rem"><i class="fab fa-linkedin"></i> LinkedIn</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── SCRIPTS ──────────────────────────────────────────────────────── -->
+<script>
+// ── Scroll Progress Bar ──
+const scrollBar = document.getElementById('scroll-bar');
+window.addEventListener('scroll', () => {
+  const pct = (window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100;
+  scrollBar.style.width = pct + '%';
+  // Back to top
+  const btn = document.getElementById('back-top');
+  if (window.scrollY > 400) btn.classList.add('show'); else btn.classList.remove('show');
+  // Active nav
+  const sections = ['projects','kpis'];
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      const rect = el.getBoundingClientRect();
+      if (rect.top <= 80 && rect.bottom >= 80) {
+        document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+      }
+    }
+  });
+});
+
+// ── Back to Top ──
+document.getElementById('back-top').addEventListener('click', () => {
+  window.scrollTo({top:0, behavior:'smooth'});
+});
+
+// ── Scroll Reveal ──
+const revealEls = document.querySelectorAll('.reveal');
+const revealObs = new IntersectionObserver((entries) => {
+  entries.forEach(e => { if(e.isIntersecting) { e.target.classList.add('visible'); revealObs.unobserve(e.target); } });
+}, { threshold: 0.12 });
+revealEls.forEach(el => revealObs.observe(el));
+
+// ── Typing Animation ──
+const typedEl = document.getElementById('typed-name');
+const cursor  = document.getElementById('cursor');
+const fullText = 'Tshepang Pheto';
+let idx = 0;
+function typeNext() {
+  if (idx <= fullText.length) {
+    typedEl.textContent = fullText.slice(0, idx);
+    idx++;
+    setTimeout(typeNext, idx === 1 ? 600 : 80);
+  } else {
+    setTimeout(() => { if(cursor) cursor.style.display='none'; }, 1200);
+  }
+}
+window.addEventListener('load', () => setTimeout(typeNext, 400));
+
+// ── KPI Counter Animation ──
+// ── PROJECT REGISTRY — edit here to update KPI metrics automatically ──
+// Add a new object for every new project. KPIs are derived, never hardcoded.
+const projects = [
+  {
+    name: "Revenue Intelligence & Scenario Forecasting Command Center",
+    streamlit: true,
+    revenueOptPct: 18,   // % revenue optimization demonstrated
+    queryPerfPct:  0,
+    accuracyPct:   0,
+    recordsK:      0,
+    countries:     0,
+    roiX:          0,
+    liveUrl: "https://Revenue-Intelligence-Command-Center-tlotso.streamlit.app/"
+  },
+  {
+    name: "Global Water Consumption & 2030 Risk Portal",
+    streamlit: true,
+    revenueOptPct: 0,
+    queryPerfPct:  0,
+    accuracyPct:   30,
+    recordsK:      0,
+    countries:     100,
+    roiX:          0,
+    liveUrl: "https://github.com/Tlotso/Global-_Water_Consumption_Analysis_2000-2025",
+    streamlitUrl:  "https://github.com/Tlotso/Global-_Water_Consumption_Analysis_2000-2025"
+  },
+  {
+    name: "RFM Customer Segmentation & Churn Prediction",
+    streamlit: true,
+    revenueOptPct: 0,
+    queryPerfPct:  0,
+    accuracyPct:   0,
+    recordsK:      500,  // K records analysed
+    countries:     0,
+    roiX:          0,
+    liveUrl: "https://github.com/Tlotso/RFM_Segmentation_Model"
+  },
+  {
+    name: "Executive Performance Strategy Dashboard",
+    streamlit: false,
+    revenueOptPct: 0,
+    queryPerfPct:  0,
+    accuracyPct:   0,
+    recordsK:      500,
+    countries:     0,
+    roiX:          3.2,  // x ROI on reporting infrastructure
+    liveUrl: "https://public.tableau.com/app/profile/tlotso"
+  },
+  {
+    name: "COVID-19 Data Architecture & Public Health Wrangling",
+    streamlit: false,
+    revenueOptPct: 0,
+    queryPerfPct:  40,   // % query performance improvement
+    accuracyPct:   0,
+    recordsK:      500,
+    countries:     0,
+    roiX:          0,
+    liveUrl: "https://github.com/Tlotso/PortfolioProjects"
+  }
+];
+
+// ── Derived KPIs — never hardcoded, always computed from registry ──
+const kpis = {
+  revenue:    Math.max(...projects.map(p => p.revenueOptPct)),
+  efficiency: Math.max(...projects.map(p => p.queryPerfPct)),
+  accuracy:   Math.max(...projects.map(p => p.accuracyPct)),
+  records:    Math.max(...projects.map(p => p.recordsK)),
+  countries:  projects.reduce((sum, p) => sum + p.countries, 0),
+  roi:        Math.max(...projects.map(p => p.roiX)),
+  // Bonus derived metrics
+  totalProjects:   projects.length,
+  streamlitApps:   projects.filter(p => p.streamlit).length
+};
+
+function animateCount(id, target, suffix, isDecimal) {
+  const el = document.getElementById(id);
+  if (!el) return;
+  let current = 0;
+  const steps = 60, duration = 1800;
+  const inc = target / steps;
+  const timer = setInterval(() => {
+    current += inc;
+    if (current >= target) { current = target; clearInterval(timer); }
+    el.textContent = isDecimal ? current.toFixed(1)+suffix : Math.round(current)+suffix;
+  }, duration/steps);
+}
+
+// Trigger KPI counters when scrolled into view
+const kpiSection = document.getElementById('kpis');
+let kpiDone = false;
+const kpiObs = new IntersectionObserver((entries) => {
+  if (entries[0].isIntersecting && !kpiDone) {
+    kpiDone = true;
+    animateCount('kpi-revenue',    kpis.revenue,    '%',   false);
+    animateCount('kpi-efficiency', kpis.efficiency, '%',   false);
+    animateCount('kpi-accuracy',   kpis.accuracy,   '%',   false);
+    animateCount('kpi-records',    kpis.records,    'K+',  false);
+    animateCount('kpi-countries',  kpis.countries,  '+',   false);
+    animateCount('kpi-roi',        kpis.roi,        'x',   true);
+  }
+}, { threshold: 0.3 });
+if (kpiSection) kpiObs.observe(kpiSection);
+
+// ── Tech Stack Filter ──
+document.querySelectorAll('.tech-filter-btn').forEach(btn => {
+  btn.addEventListener('click', function() {
+    // Update active button
+    document.querySelectorAll('.tech-filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    // Filter cards
+    const filter = this.dataset.filter;
+    document.querySelectorAll('.tech-card').forEach(card => {
+      if (filter === 'all' || card.dataset.cat === filter) {
+        card.classList.remove('hidden');
+        card.style.animation = 'fadeInUp .3s ease forwards';
+      } else {
+        card.classList.add('hidden');
+      }
+    });
+  });
+});
+
+// ── Bio Modal ──
+function openBio(e) { e.preventDefault(); document.getElementById('bio-overlay').style.display='block'; document.body.style.overflow='hidden'; }
+function closeBio() { document.getElementById('bio-overlay').style.display='none'; document.body.style.overflow=''; }
+
+document.getElementById('bio-trigger').addEventListener('click', openBio);
+document.getElementById('bio-trigger-hero').addEventListener('click', openBio);
+document.getElementById('bio-close').addEventListener('click', closeBio);
+document.getElementById('bio-overlay').addEventListener('click', function(e){ if(e.target===this) closeBio(); });
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeBio(); });
+</script>
 
 </body>
 </html>

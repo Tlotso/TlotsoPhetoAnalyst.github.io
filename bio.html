@@ -1,0 +1,381 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Professional Bio | Tlotso T Pheto</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+        :root {
+            --accent:       #C9A84C;
+            --accent-dim:   rgba(201, 168, 76, 0.12);
+            --bg-void:      #0D1117;
+            --bg-deep:      #161B22;
+            --bg-card:      #1C2128;
+            --bg-card-alt:  #21262D;
+            --border:       #30363D;
+            --text-primary: #E6EDF3;
+            --text-muted:   #7D8590;
+            --text-dim:     #484F58;
+        }
+
+        body, #wrapper { background: var(--bg-void) !important; color: var(--text-primary) !important; }
+
+        #header {
+            background: var(--bg-deep) !important;
+            border-bottom: 1px solid var(--border) !important;
+        }
+        #header .logo { color: var(--accent) !important; }
+
+        #nav {
+            backdrop-filter: blur(16px);
+            background: rgba(22, 27, 34, 0.95) !important;
+            border-bottom: 1px solid var(--border) !important;
+        }
+        #nav ul.links a { color: var(--text-muted) !important; }
+        #nav ul.links li.active a,
+        #nav ul.links a:hover { color: var(--accent) !important; }
+
+        #main { background: var(--bg-void) !important; padding: 3rem 2rem; max-width: 860px; margin: 0 auto; }
+
+        /* ── HERO ── */
+        .bio-hero {
+            text-align: center;
+            padding: 4rem 2rem 3rem;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 3rem;
+        }
+        .bio-hero h1 {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            letter-spacing: 3px;
+            margin-bottom: 0.5rem;
+        }
+        .bio-hero .title-line {
+            font-size: 1rem;
+            color: var(--accent);
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            margin-bottom: 2rem;
+        }
+        .bio-hero .contact-row {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .bio-hero .contact-row a {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-size: 0.85rem;
+            border-bottom: none;
+            transition: color 0.2s;
+        }
+        .bio-hero .contact-row a:hover { color: var(--accent); }
+        .bio-hero .contact-row i { color: var(--accent); }
+
+        /* ── SECTIONS ── */
+        .bio-section { margin-bottom: 3rem; }
+        .bio-section h2 {
+            font-size: 0.7rem;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 1.2rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid var(--border);
+        }
+        .bio-section p {
+            color: var(--text-muted);
+            line-height: 1.9;
+            font-size: 1rem;
+        }
+        .bio-section p strong { color: var(--accent); }
+
+        /* ── EXPERIENCE TIMELINE ── */
+        .timeline { list-style: none; padding: 0; margin: 0; }
+        .timeline li {
+            display: grid;
+            grid-template-columns: 140px 1fr;
+            gap: 1.5rem;
+            padding: 1.5rem 0;
+            border-bottom: 1px solid var(--border);
+        }
+        .timeline li:last-child { border-bottom: none; }
+        .tl-date {
+            font-size: 0.75rem;
+            color: var(--text-dim);
+            letter-spacing: 1px;
+            padding-top: 0.15rem;
+        }
+        .tl-role { font-weight: 700; color: var(--text-primary); margin-bottom: 0.2rem; }
+        .tl-company { font-size: 0.85rem; color: var(--accent); margin-bottom: 0.5rem; }
+        .tl-desc { font-size: 0.88rem; color: var(--text-muted); line-height: 1.7; }
+
+        /* ── SKILLS GRID ── */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+        }
+        .skill-group {
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 10px;
+            padding: 1.2rem 1.4rem;
+        }
+        .skill-group h4 {
+            font-size: 0.65rem;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 0.8rem;
+        }
+        .skill-group p {
+            font-size: 0.82rem;
+            color: var(--text-muted);
+            line-height: 1.7;
+            margin: 0;
+        }
+
+        /* ── CERT PILLS ── */
+        .cert-row { display: flex; flex-wrap: wrap; gap: 0.6rem; }
+        .cert-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 50px;
+            padding: 0.4rem 0.9rem;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+        .cert-pill i { color: var(--accent); font-size: 0.75rem; }
+
+        /* ── CTA ── */
+        .bio-cta {
+            text-align: center;
+            padding: 3rem 0 2rem;
+            border-top: 1px solid var(--border);
+            margin-top: 3rem;
+        }
+        .bio-cta h3 { color: var(--text-primary); margin-bottom: 0.5rem; }
+        .bio-cta p { color: var(--text-muted); margin-bottom: 1.5rem; }
+        .btn-gold {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: transparent;
+            border: 2px solid var(--accent);
+            color: var(--accent);
+            padding: 0.7rem 1.8rem;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-decoration: none;
+            margin: 0.4rem;
+            transition: all 0.25s;
+        }
+        .btn-gold:hover {
+            background: var(--accent);
+            color: var(--bg-void);
+            border-bottom: none;
+        }
+
+        @media screen and (max-width: 600px) {
+            .timeline li { grid-template-columns: 1fr; gap: 0.4rem; }
+            .tl-date { font-size: 0.7rem; }
+        }
+    </style>
+</head>
+
+<body class="is-preload">
+<div id="wrapper" class="fade-in">
+
+    <header id="header">
+        <a href="index.html" class="logo">Strategic Portfolio 2026</a>
+    </header>
+
+    <nav id="nav">
+        <ul class="links">
+            <li><a href="index.html">Technical Projects</a></li>
+            <li class="active"><a href="bio.html">Professional Bio</a></li>
+        </ul>
+        <ul class="icons">
+            <li><a href="https://github.com/Tlotso" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+            <li><a href="https://www.linkedin.com/in/tlotso-tshepang-pheto-a0568bb9/" target="_blank" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+        </ul>
+    </nav>
+
+    <div id="main">
+
+        <!-- HERO -->
+        <div class="bio-hero">
+            <h1>TLOTSO TSHEPANG PHETO</h1>
+            <div class="title-line">Junior Data Analyst &nbsp;·&nbsp; Business Intelligence &nbsp;·&nbsp; Revenue & Operations Intelligence</div>
+            <p style="max-width:620px;margin:0 auto;color:var(--text-muted);line-height:1.8;">
+                Based in <strong>Gaborone, Botswana</strong> — I turn complex datasets into decisions that move organisations forward.
+                My work sits at the intersection of analytics, business intelligence, and operational strategy.
+            </p>
+            <div class="contact-row">
+                <a href="mailto:tlotsopheto@gmail.com"><i class="fas fa-envelope"></i> tlotsopheto@gmail.com</a>
+                <a href="tel:+26775481112"><i class="fas fa-phone"></i> +267 754 81112</a>
+                <a href="https://github.com/Tlotso" target="_blank"><i class="fab fa-github"></i> github.com/Tlotso</a>
+                <a href="https://www.linkedin.com/in/tlotso-tshepang-pheto-a0568bb9/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            </div>
+        </div>
+
+        <!-- ABOUT -->
+        <div class="bio-section">
+            <h2>About Me</h2>
+            <p>
+                I am a junior data analyst with a background that spans <strong>healthcare data systems</strong>, 
+                <strong>supply chain analytics</strong>, and <strong>revenue intelligence</strong>. My experience 
+                was built inside organisations where data accuracy had real consequences — medicine availability 
+                at Central Medical Stores, district health reporting for the Ministry of Health — not just dashboards 
+                for their own sake.
+            </p>
+            <p>
+                Alongside my operational experience, I have built a portfolio of end-to-end analytical projects: 
+                a <strong>live Streamlit forecasting app</strong> using Holt-Winters exponential smoothing, 
+                a <strong>global water crisis risk model</strong> across 100+ countries, 
+                and an <strong>RFM customer segmentation engine</strong> on 500K+ e-commerce records. 
+                These are projects I built because I find the problems genuinely interesting.
+            </p>
+            <p>
+                I hold a <strong>BSc (Hons) in Computing specialising in Business Intelligence & Data Analytics</strong> 
+                from the University of Sunderland, and I am a <strong>Cisco Certified AI Business Practitioner (AIBIZ)</strong> — 
+                reflecting my commitment to understanding how AI applies at the organisational strategy level, 
+                not just the technical one.
+            </p>
+        </div>
+
+        <!-- EXPERIENCE -->
+        <div class="bio-section">
+            <h2>Professional Experience</h2>
+            <ul class="timeline">
+                <li>
+                    <div class="tl-date">03/2025 — Present</div>
+                    <div>
+                        <div class="tl-role">Operational & Revenue Intelligence Associate</div>
+                        <div class="tl-company">Rooteddeck · Gaborone</div>
+                        <div class="tl-desc">Developing KPI frameworks, revenue assurance proposals, and dashboard concepts during the organisational incubation phase. Building reconciliation models and governance workflows that make revenue performance visible in real time.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="tl-date">05/2024 — 01/2025</div>
+                    <div>
+                        <div class="tl-role">Data Clerk</div>
+                        <div class="tl-company">Chemonics Botswana · Central Medical Stores, Gaborone</div>
+                        <div class="tl-desc">Data entry, cleaning, validation, and quality assurance across healthcare supply chain datasets. Supported continuous improvement of data governance processes in a regulated public health environment.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="tl-date">03/2022 — 10/2024</div>
+                    <div>
+                        <div class="tl-role">IT Officer</div>
+                        <div class="tl-company">Chemonics Botswana · Serowe District</div>
+                        <div class="tl-desc">Managed DHIS2 Vaccine Tracker data infrastructure for district-level public health reporting. Produced monthly BI reports for Ministry of Health stakeholders and ensured data integrity across health information systems.</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- SKILLS -->
+        <div class="bio-section">
+            <h2>Core Skills</h2>
+            <div class="skills-grid">
+                <div class="skill-group">
+                    <h4>BI & Visualisation</h4>
+                    <p>Power BI, Tableau, Streamlit, Panel, Plotly, Matplotlib, Seaborn, Excel Dashboards</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Programming & SQL</h4>
+                    <p>Python (Pandas, Scikit-Learn, NumPy, Prophet), SQL/T-SQL, R, SPSS</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Analytics & ML</h4>
+                    <p>RFM Segmentation, Time-Series Forecasting, Holt-Winters, KPI Monitoring, Predictive Analytics</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Data Governance</h4>
+                    <p>Data quality assurance, validation, reconciliation, ETL, audit documentation, DHIS2</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Soft Skills</h4>
+                    <p>Stakeholder Management, Business Acumen, Analytical Thinking, Communication to Non-technical Audiences, Results Orientation</p>
+                </div>
+                <div class="skill-group">
+                    <h4>Tools & Platforms</h4>
+                    <p>VS Code, Jupyter Notebook, Git, GitHub, Excel (Advanced), SQL Server, MySQL, MongoDB</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="bio-section">
+            <h2>Education</h2>
+            <ul class="timeline">
+                <li>
+                    <div class="tl-date">University of Sunderland, UK</div>
+                    <div>
+                        <div class="tl-role">BSc (Hons) Computing — Business Intelligence & Data Analytics</div>
+                        <div class="tl-desc">Specialised programme covering data analytics, business intelligence systems, database architecture, and applied machine learning.</div>
+                    </div>
+                </li>
+                <li>
+                    <div class="tl-date">Moshupa Senior Secondary</div>
+                    <div>
+                        <div class="tl-role">Cambridge Certificate (BGCSE)</div>
+                        <div class="tl-desc">Botswana General Certificate of Secondary Education.</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+        <!-- CERTIFICATIONS -->
+        <div class="bio-section">
+            <h2>Certifications</h2>
+            <div class="cert-row">
+                <span class="cert-pill"><i class="fas fa-certificate"></i> Cisco AI Business Practitioner (AIBIZ)</span>
+                <span class="cert-pill"><i class="fas fa-certificate"></i> Data Visualisation with Tableau — Coursera</span>
+                <span class="cert-pill"><i class="fas fa-certificate"></i> Machine Learning with Python — DataCamp</span>
+                <span class="cert-pill"><i class="fas fa-certificate"></i> Python for Data Science Professional</span>
+                <span class="cert-pill"><i class="fas fa-certificate"></i> DHIS2 Academy (2023)</span>
+                <span class="cert-pill"><i class="fas fa-certificate"></i> CCNA Routing & Switching (Levels 1–4)</span>
+            </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="bio-cta">
+            <h3>Let's work together</h3>
+            <p>Open to data analyst, BI analyst, and revenue intelligence roles in Botswana and remotely.</p>
+            <a href="mailto:tlotsopheto@gmail.com" class="btn-gold"><i class="fas fa-envelope"></i> Get In Touch</a>
+            <a href="https://www.linkedin.com/in/tlotso-tshepang-pheto-a0568bb9/" target="_blank" class="btn-gold"><i class="fab fa-linkedin"></i> LinkedIn</a>
+            <a href="https://github.com/Tlotso" target="_blank" class="btn-gold"><i class="fab fa-github"></i> GitHub</a>
+            <a href="index.html" class="btn-gold"><i class="fas fa-arrow-left"></i> View Projects</a>
+        </div>
+
+    </div><!-- /#main -->
+
+</div><!-- /#wrapper -->
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/jquery.scrollex.min.js"></script>
+<script src="assets/js/jquery.scrolly.min.js"></script>
+<script src="assets/js/browser.min.js"></script>
+<script src="assets/js/breakpoints.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
